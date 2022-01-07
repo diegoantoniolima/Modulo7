@@ -1,0 +1,61 @@
+package Heranca;
+
+public class ContaSalario extends Conta {
+
+	private int limetesaques;
+	private static int qtdeSaques;
+	
+	@Override
+	public double depositar(double valor) {
+		return saldo+valor;
+	}
+	
+	@Override
+	public double sacar(double valor) {
+
+		setQtdeSaques(getQtdeSaques()+1);
+		
+		if (qtdeSaques <= getLimetesaques()) {
+			double retirado = (getSaldo()- valor);
+			
+			if (retirado > 0) 
+				return retirado;
+			else
+				return 0;
+		}
+		
+		
+	}
+
+	@Override
+	public double getSaldo() {
+		
+		return 0;
+	}
+
+	public ContaSalario(int numero, int agencia, String banco, double saldo, int limetesaques) {
+		super(numero, agencia, banco, saldo);
+		this.limetesaques = limetesaques;
+	}
+	
+	public int getLimetesaques() {
+		return limetesaques;
+	}
+
+	public void setLimetesaques(int limetesaques) {
+		this.limetesaques = limetesaques;
+	}
+
+	public static int getQtdeSaques() {
+		return qtdeSaques;
+	}
+
+	public static void setQtdeSaques(int qtdeSaques) {
+		ContaSalario.qtdeSaques = qtdeSaques;
+	}
+
+	@Override
+	public String toString() {
+		return "ContaSalario [limetesaques=" + limetesaques + "]";
+	}
+}

@@ -1,0 +1,41 @@
+package Heranca;
+
+public class ContaSalario extends Conta {
+
+	private int numeroLimetesaques;
+	
+	@Override
+	public void depositar() {
+		
+	}
+	
+	@Override
+	public void sacar() {
+
+	}
+
+	@Override
+	public double getSaldo() {
+		
+		return 0;
+	}
+
+	public ContaSalario(int numero, int agencia, String banco, double saldo, int numeroLimetesaques) {
+		super(numero, agencia, banco, saldo);
+		this.numeroLimetesaques = numeroLimetesaques;
+	}
+
+	public int getNumeroLimetesaques() {
+		return numeroLimetesaques;
+	}
+
+	public void setNumeroLimetesaques(int numeroLimetesaques) {
+		this.numeroLimetesaques = numeroLimetesaques;
+	}
+
+	@Override
+	public String toString() {
+		return "ContaSalario [numeroLimetesaques=" + numeroLimetesaques + "]";
+	}
+
+}

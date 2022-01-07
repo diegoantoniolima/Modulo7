@@ -1,0 +1,17 @@
+package Heranca;
+
+public class ContaSalario {
+
+	
+	@Override
+	public void depositar() {
+
+		
+	}
+	
+	@Override
+	public void sacar() {
+
+
+	}
+}

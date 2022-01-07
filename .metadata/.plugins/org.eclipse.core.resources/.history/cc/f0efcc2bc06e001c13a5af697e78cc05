@@ -1,0 +1,51 @@
+package Heranca;
+
+public class ContaPoupanca extends Conta {
+
+	private int diaAniversario;
+	private double taxaDeJuros;
+	private double saldo;
+	
+	@Override
+	public double getSaldo() {
+		return this.saldo + this.taxaDeJuros * this.saldo;
+	}	
+	
+	@Override
+	public void depositar(double valor) {
+		
+	}
+	
+	@Override
+	public void sacar(double valor) {
+
+	}
+	
+	public ContaPoupanca(int numero, int agencia, String banco, double saldo, int diaAniversario, double taxaDeJuros,
+			double saldo2) {
+		super(numero, agencia, banco, saldo);
+		this.diaAniversario = diaAniversario;
+		this.taxaDeJuros = taxaDeJuros;
+		saldo = saldo2;
+	}
+
+	public int getDiaAniversario() {
+		return diaAniversario;
+	}
+
+	public void setDiaAniversario(int diaAniversario) {
+		this.diaAniversario = diaAniversario;
+	}
+
+	public double getTaxaDeJuros() {
+		return taxaDeJuros;
+	}
+
+	public void setTaxaDeJuros(double taxaDeJuros) {
+		this.taxaDeJuros = taxaDeJuros;
+	}
+
+	public void setSaldo(double saldo) {
+		this.saldo = saldo;
+	}	
+}

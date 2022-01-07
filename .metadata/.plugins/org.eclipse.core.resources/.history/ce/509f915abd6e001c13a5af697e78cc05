@@ -1,0 +1,22 @@
+package Heranca;
+
+public class ContaSalario extends Conta {
+
+	
+	public ContaSalario(int numero, int agencia, String banco, double saldo) {
+		super(numero, agencia, banco, saldo);
+		
+	}
+
+	@Override
+	public void depositar() {
+
+		
+	}
+	
+	@Override
+	public void sacar() {
+
+
+	}
+}
